@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 class ProcessoSeletivo {
     final double salarioBase = 2000.00;
-    ArrayList<String> candidatosSelecionados = new ArrayList(5);
+    ArrayList<String> candidatosSelecionados = new ArrayList<>(5);
 
     void analisarCandidato(double pretensaoSalarial) {
         if (this.salarioBase > pretensaoSalarial) {
