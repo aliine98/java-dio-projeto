@@ -37,6 +37,12 @@ class Main {
 
         candidatos.forEach((Candidato c) -> ps.selecionarCandidato(c.getNome(),c.getPretensaoSalarial()));
 
-        System.out.println(ps.getCandidatosSelecionados());
+        ArrayList<String> candidatosSelecionados = ps.getCandidatosSelecionados();
+
+        for (String candidato : candidatosSelecionados) {
+            System.out.println("O candidato " + candidato + " foi selecionado");
+
+            ps.ligar(candidato);
+        }
 	}
 }
