@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
@@ -37,6 +38,8 @@ class Main {
 
         candidatos.forEach((Candidato c) -> ps.selecionarCandidato(c.getNome(),c.getPretensaoSalarial()));
 
+        System.out.println("-------------------------");
+
         ArrayList<String> candidatosSelecionados = ps.getCandidatosSelecionados();
 
         for (String candidato : candidatosSelecionados) {
@@ -44,5 +47,18 @@ class Main {
 
             ps.ligar(candidato);
         }
+
+        System.out.println("-------------------------");
+
+        Contador contador = new Contador();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite o número inicial:");
+        int inicio = sc.nextInt();
+        System.out.println("Digite o número final:");
+        int fim= sc.nextInt();
+
+        contador.contar(inicio, fim);
+        sc.close();
 	}
 }
