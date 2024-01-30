@@ -58,7 +58,11 @@ class Main {
         System.out.println("Digite o número final:");
         int fim= sc.nextInt();
 
-        contador.contar(inicio, fim);
-        sc.close();
+        try {
+            contador.contar(inicio, fim);
+            sc.close();
+        } catch(ParametroInvalidoException e) {
+            System.out.println(e);
+        }
 	}
 }
